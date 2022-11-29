@@ -1,0 +1,42 @@
+.todo-view {
+  border: 3px solid rgb(1, 97, 97);
+  border-radius: 10px;
+
+  display: inline-block;
+  margin: 0 20px 20px 0;
+
+  width: 330px;
+}
+
+.todo-box {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.todo-title {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 0 20px 0;
+}
+
+.button-box {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+}
+
+.todo-delete {
+  border: 2px solid red;
+  border-radius: 5px;
+
+  width: 140px;
+  height: 40px;
+}
+
+.todo-done {
+  border: 2px solid green;
+  border-radius: 5px;
+
+  width: 140px;
+  height: 40px;
+}

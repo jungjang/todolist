@@ -1,0 +1,15 @@
+.list-box {
+  background-color: whitesmoke;
+}
+
+/* .todo-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 20px 20px 0;
+  gap: 10px;
+} */
+
+.todo-condition {
+  padding: 20px 0 0 20px;
+}
