@@ -9,7 +9,6 @@ const List = (props) => {
   };
 
   const editButton = (id) => {
-    console.log("edit");
     const newTodos = props.todos.map((todos) => {
       if (todos.id === id) {
         return { ...todos, isDone: !todos.isDone };
