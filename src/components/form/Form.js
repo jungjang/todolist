@@ -15,9 +15,10 @@ const Form = (props) => {
 
   const onClickAddTodoButton = (e) => {
     e.preventDefault();
-
     props.saveTodos(title, content);
-    console.log(title, content);
+
+    setTitle("");
+    setContent("");
   };
 
   return (

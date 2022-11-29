@@ -9,6 +9,7 @@
 }
 
 .todo-box {
+  height: 100px;
   margin-top: 20px;
   padding: 20px;
 }
@@ -16,6 +17,12 @@
 .todo-title {
   font-weight: bold;
   font-size: 20px;
+  padding: 0 0 20px 0;
+}
+
+.todo-content {
+  font-weight: 300;
+  font-size: 16px;
   padding: 0 0 20px 0;
 }
 

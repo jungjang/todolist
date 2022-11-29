@@ -3,39 +3,33 @@ import "./style.css";
 import Todo from "../todo/Todo";
 
 const List = (props) => {
-  const deleteButton = () => {
-    console.log("delete");
-    // const newTodos = props.todos.filter((todo) => {
-    //   return todo.id !== id;
-    // });
-    // props.setTodos(newTodos);
+  const deleteButton = (id) => {
+    const newTodos = props.todos.filter((todos) => todos.id !== id);
+    props.setTodos(newTodos);
   };
 
-  const editButton = () => {
+  const editButton = (id) => {
     console.log("edit");
-    // const newTodos = props.todos.map((todo) => {
-    //   if (todo.id === id) {
-    //     return {
-    //       ...todo,
-    //       isDone: !todo.isDone,
-    //     };
-    //   } else {
-    //     return { ...todo };
-    //   }
-    // });
-    // props.setTodos(newTodos);
+    const newTodos = props.todos.map((todos) => {
+      if (todos.id === id) {
+        return { ...todos, isDone: !todos.isDone };
+      } else {
+        return { ...todos };
+      }
+    });
+    props.setTodos(newTodos);
   };
 
   return (
     <div className="list-box">
       <h1 className="todo-condition">Working...😢</h1>
       <div>
-        {props.todos.map((todo) => {
-          if (todo.isDone === false) {
+        {props.todos.map((todos) => {
+          if (todos.isDone === false) {
             return (
               <Todo
-                key={todo.id}
-                todo={todo}
+                key={todos.id}
+                todos={todos}
                 setTodos={props.setTodos}
                 deleteButton={deleteButton}
                 editButton={editButton}
@@ -48,12 +42,12 @@ const List = (props) => {
       </div>
       <h1 className="todo-condition">Done...😎</h1>
       <div>
-        {props.todos.map((todo) => {
-          if (todo.isDone === true) {
+        {props.todos.map((todos) => {
+          if (todos.isDone === true) {
             return (
               <Todo
-                key={todo.id}
-                todo={todo}
+                key={todos.id}
+                todos={todos}
                 setTodos={props.setTodos}
                 deleteButton={deleteButton}
                 editButton={editButton}
