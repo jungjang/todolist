@@ -28,8 +28,8 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Form todos={todos} setTodos={setTodos} saveTodos={SaveTodos} />
-      <List todos={todos} setTodos={setTodos} saveTodos={SaveTodos} />
+      <Form saveTodos={SaveTodos} />
+      <List todos={todos} setTodos={setTodos} />
     </div>
   );
 };
