@@ -19,7 +19,7 @@ const App = () => {
     },
   ]);
 
-  const SaveTodos = (title, content) => {
+  const saveTodos = (title, content) => {
     setTodos([
       ...todos,
       { id: todos.length + 1, title: title, content: content, isDone: false },
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Form saveTodos={SaveTodos} />
+      <Form saveTodos={saveTodos} />
       <List todos={todos} setTodos={setTodos} />
     </div>
   );

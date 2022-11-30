@@ -2,32 +2,31 @@ import React from "react";
 import "./style.css";
 import Todo from "../todo/Todo";
 
-const List = (props) => {
+const List = ({ todos, setTodos }) => {
   const deleteButton = (id) => {
-    const newTodos = props.todos.filter((todos) => todos.id !== id);
-    props.setTodos(newTodos);
+    const newTodos = todos.filter((todos) => todos.id !== id);
+    setTodos(newTodos);
   };
 
   const editButton = (id) => {
-    const newTodos = props.todos.map((todos) => {
+    const newTodos = todos.map((todos) => {
       if (todos.id === id) {
         return { ...todos, isDone: !todos.isDone };
       } else {
         return { ...todos };
       }
     });
-    props.setTodos(newTodos);
+    setTodos(newTodos);
   };
 
   return (
     <div className="list-box">
       <h1 className="todo-condition">Working...😢</h1>
       <div>
-        {props.todos.map((todos) => {
+        {todos.map((todos) => {
           if (todos.isDone === false) {
             return (
               <Todo
-                key={todos.id}
                 todos={todos}
                 deleteButton={deleteButton}
                 editButton={editButton}
@@ -40,7 +39,7 @@ const List = (props) => {
       </div>
       <h1 className="todo-condition">Done...😎</h1>
       <div>
-        {props.todos.map((todos) => {
+        {todos.map((todos) => {
           if (todos.isDone === true) {
             return (
               <Todo

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-const Form = (props) => {
+const Form = ({ saveTodos }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -15,7 +15,7 @@ const Form = (props) => {
 
   const onClickAddTodoButton = (e) => {
     e.preventDefault();
-    props.saveTodos(title, content);
+    saveTodos(title, content);
 
     setTitle("");
     setContent("");
