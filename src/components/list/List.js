@@ -29,7 +29,6 @@ const List = (props) => {
               <Todo
                 key={todos.id}
                 todos={todos}
-                setTodos={props.setTodos}
                 deleteButton={deleteButton}
                 editButton={editButton}
               />
@@ -47,7 +46,6 @@ const List = (props) => {
               <Todo
                 key={todos.id}
                 todos={todos}
-                setTodos={props.setTodos}
                 deleteButton={deleteButton}
                 editButton={editButton}
               />
